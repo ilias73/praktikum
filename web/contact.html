@@ -1,4 +1,58 @@
-<html>
-    <head>contact</head>
-    <h1>this the contact page</h1>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | IR-CONSULTING</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #eef2f3; color: #333; }
+        header { background: linear-gradient(90deg, #1a1a2e, #16213e); color: white; padding: 20px; text-align: center; }
+        nav { background: #0f3460; padding: 10px; text-align: center; }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; display: inline-block; transition: background 0.3s; }
+        nav a:hover { background: #e94560; }
+        section { padding: 20px; max-width: 1200px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-top: 20px; }
+        footer { background: linear-gradient(90deg, #1a1a2e, #16213e); color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        .contact-form button { background: #0f3460; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+        .contact-form button:hover { background: #e94560; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IR-CONSULTING</h1>
+        <p>Kontaktieren Sie uns für Ihre Beratung</p>
+    </header>
+
+    <nav>
+        <a href="/">Startseite</a>
+        <a href="#kontaktformular">Kontaktformular</a>
+    </nav>
+
+    <section>
+        <h2>Kontaktieren Sie uns</h2>
+        <p>Haben Sie Fragen oder benötigen Sie weitere Informationen? Füllen Sie einfach das Kontaktformular aus, und wir melden uns schnellstmöglich bei Ihnen.</p>
+
+        <div id="kontaktformular">
+            <!-- Form sends data to send-email.php -->
+            <form class="contact-form" action="send-email.php" method="POST">
+                <label for="name">Ihr Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Ihre E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="nachricht">Ihre Nachricht:</label>
+                <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+
+                <button type="submit">Absenden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Kontakt: ilias.ir73@gmail.com</p>
+    </footer>
+
+</body>
 </html>
