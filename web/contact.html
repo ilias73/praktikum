@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -25,7 +26,7 @@
     </header>
 
     <nav>
-        <a href="/">Startseite</a>
+        <a href="#" id="startseite">Startseite</a>
         <a href="#kontaktformular">Kontaktformular</a>
     </nav>
 
@@ -53,6 +54,14 @@
     <footer>
         <p>Kontakt: ilias.ir73@gmail.com</p>
     </footer>
+
+    <script>
+        // JavaScript to reload the page when clicking on "Startseite"
+        document.getElementById('startseite').addEventListener('click', function() {
+            // Hier kann der Pfad zu deiner Startseite festgelegt werden
+            window.location.href = '/';  // Zum Beispiel: '/index.html' oder '/' je nach deiner Struktur
+        });
+    </script>
 
 </body>
 </html>
