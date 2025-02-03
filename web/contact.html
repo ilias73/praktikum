@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -26,7 +25,8 @@
     </header>
 
     <nav>
-        <a href="#" id="startseite">Startseite</a>
+        <!-- Der Link wird jetzt zur tatsächlichen Startseite weiterleiten -->
+        <a href="index.html" id="startseite">Startseite</a>
         <a href="#kontaktformular">Kontaktformular</a>
     </nav>
 
@@ -56,12 +56,15 @@
     </footer>
 
     <script>
-        // JavaScript to reload the page when clicking on "Startseite"
-        document.getElementById('startseite').addEventListener('click', function() {
-            // Hier kann der Pfad zu deiner Startseite festgelegt werden
-            window.location.href = '/';  // Zum Beispiel: '/index.html' oder '/' je nach deiner Struktur
+        // Funktion, um die Startseite beim Klicken neu zu laden
+        document.getElementById('startseite').addEventListener('click', function(event) {
+            event.preventDefault(); // Verhindert die normale Link-Aktion
+            window.location.href = 'index.html';  // Hier den Pfad zur Startseite angeben
+            // Oder wenn du die Seite einfach neu laden möchtest:
+            // location.reload(); // Dies sorgt dafür, dass die Seite neu geladen wird
         });
     </script>
 
 </body>
 </html>
+
